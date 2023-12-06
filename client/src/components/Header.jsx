@@ -24,11 +24,11 @@ export default function Header() {
   }, [location.search]);
   return (
     <header className="bg-slate-200 shadow-md">
-      <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
+      <div className="flex justify-between items-center max-w-6xl mx-auto p-3 ">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
             <span className="text-orange-400">HOME</span>
-            <span className=" text-black">LET</span>
+            <span className=" text-orange-400">LET</span>
           </h1>
         </Link>
         <form
@@ -48,12 +48,12 @@ export default function Header() {
         </form>
         <ul className="flex gap-4">
           <Link to="/">
-            <li className="hidden sm:inline text-slate-700 hover:underline">
+            <li className="hidden sm:inline text-slate-700 hover:text-orange-400">
               Home
             </li>
           </Link>
           <Link to="/about">
-            <li className="hidden sm:inline text-slate-700 hover:underline">
+            <li className="hidden sm:inline text-slate-700  hover:text-orange-400">
               About
             </li>
           </Link>
@@ -65,8 +65,19 @@ export default function Header() {
                 alt="profile"
               />
             ) : (
-              <li className=" text-slate-700 hover:underline"> Sign in</li>
+              <li className=" text-slate-700 hover:text-orange-400">
+                {" "}
+                Sign in
+              </li>
             )}
+          </Link>
+          <Link to="/Search">
+            <button
+              className="text-white bg-orange-400 rounded-md p-1 hover:bg-black :outline-offset-2 :outline-orange-400	
+            "
+            >
+              Offers
+            </button>
           </Link>
         </ul>
       </div>
